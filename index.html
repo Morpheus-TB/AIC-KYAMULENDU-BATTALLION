@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIC KYAMULENDU - Christian Service Battalion</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-page': '#EDF4F0',
+                        'quantum-blue': '#2F5BFF',
+                        'quantum-blue-deep': '#173C9B',
+                        'ice-glass': '#EAF5FF',
+                        'ice-glass-strong': '#DDEEFF',
+                        'eucalyptus': '#7FA98E',
+                        'eucalyptus-deep': '#2E5B4F',
+                        'mist': '#F3F7F5',
+                        'royal-blue': '#2563EB',
+                        'royal-dark': '#1D4ED8',
+                        'gold-accent': '#EAB308',
+                        'gold-dark': '#CA8A04',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(47, 91, 255, 0.10), transparent 26%),
+                radial-gradient(circle at bottom right, rgba(127, 169, 142, 0.14), transparent 28%),
+                #EDF4F0;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EDF4F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B8C9D6;
+            border-radius: 9999px;
+        }
+
+        .btn-gold-gradient {
+            background: linear-gradient(135deg, #F2C66D 0%, #D7A63B 100%);
+            box-shadow: 0 10px 20px rgba(215, 166, 59, 0.25);
+        }
+        .btn-gold-gradient:hover {
+            background: linear-gradient(135deg, #F8D992 0%, #C79021 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 18px 40px rgba(23, 60, 155, 0.08);
+        }
+
+        .premium-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,248,247,0.92));
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+        }
+
+        .sage-button {
+            background: linear-gradient(135deg, #E9F2ED 0%, #D6E7DE 100%);
+            border: 1px solid rgba(127, 169, 142, 0.35);
+            color: #2E5B4F;
+            box-shadow: 0 8px 18px rgba(127, 169, 142, 0.15);
+        }
+
+        .sage-button:hover {
+            background: linear-gradient(135deg, #EDF8F1 0%, #D5E9D8 100%);
+        }
+
+        /* Smooth transition for tabs */
+        .tab-content {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-24">
+
+    <!-- MAIN CONTAINER (MOBILE-FIRST VIEWPORT) -->
+    <div class="max-w-md mx-auto min-h-screen relative shadow-[0_30px_80px_rgba(15,23,42,0.10)] bg-gradient-to-b from-[#F4F8F7] via-[#F3F7F5] to-[#EEF3F1] border-x border-slate-200/80">
+        <!-- ========================================== -->
+        <header id="home" class="relative bg-gradient-to-br from-[#173C9B] via-[#2F5BFF] to-[#7FA98E] text-white p-6 pt-7 rounded-b-[2.5rem] shadow-[0_20px_40px_rgba(47,91,255,0.24)] overflow-hidden text-center border-b border-white/10">
+            
+            <!-- Ambient Background Glows -->
+            <div class="absolute -top-12 -right-12 w-40 h-40 bg-blue-400 opacity-20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute bottom-0 -left-12 w-40 h-40 bg-amber-400 opacity-15 rounded-full blur-2xl pointer-events-none"></div>
+
+            <!-- Logos Row -->
+            <div class="flex justify-between items-center mb-6 px-1 relative z-10">
+                
+                <!-- Left: Christian Service Battalion Emblem -->
+                <div class="w-16 h-16 bg-white/90 ring-2 ring-white/60 shadow-[0_10px_24px_rgba(15,23,42,0.12)] rounded-2xl p-1 flex items-center justify-center shrink-0 overflow-hidden">
+                    <img src="WhatsApp%20Image%202026-10-17%20at%2023.59.11%20(1).jpeg" alt="Christian Service Battalion emblem" class="w-full h-full object-cover rounded-2xl" />
+                </div>
+
+                <!-- Right: Official AIC Logo -->
+                <div class="w-16 h-16 bg-white/90 ring-2 ring-white/60 shadow-[0_10px_24px_rgba(15,23,42,0.12)] rounded-full p-1 flex items-center justify-center shrink-0 overflow-hidden">
+                    <img src="WhatsApp%20Image%202026-10-17%20at%2023.59.11.jpeg" alt="AIC logo" class="w-full h-full object-cover rounded-full" />
+                </div>
+            </div>
+
+            <!-- Title & Designation -->
+            <div class="space-y-1.5 mb-5">
+                <h1 class="text-2xl font-black font-serif tracking-tight text-white drop-shadow-md">
+                    AIC KYAMULENDU
+                </h1>
+                <p class="text-[10px] font-extrabold tracking-widest text-blue-100 uppercase">
+                    AFRICA INLAND CHURCH — CHRISTIAN SERVICE BATTALION
+                </p>
+                <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-xs font-semibold text-amber-300 mt-1">
+                    <span>Bright and Keen for Christ</span>
+                    <span class="text-red-400">📍</span>
+                </div>
+                <p class="text-xs text-blue-100/90 pt-1.5 px-3 leading-relaxed font-light">
+                    A raise-fund for cadet graduation for AIC KYAMULENDU. To equip Cadets and Officers.
+                </p>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="space-y-2 px-1">
+                <a href="#packages" class="block w-full text-center btn-gold-gradient text-slate-950 font-black py-3 rounded-xl shadow-lg transition-all text-xs uppercase tracking-wider">
+                    Make a pledge
+                </a>
+                <a href="#progress" class="block w-full text-center bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-2.5 rounded-xl transition-all text-xs backdrop-blur-sm">
+                    View progress
+                </a>
+            </div>
+        </header>
+
+
+        <!-- MAIN CONTENT BODY -->
+        <main class="p-4 space-y-6">
+
+            <!-- ========================================== -->
+            <!-- 2. FUNDRAISER PROGRESS SECTION             -->
+            <!-- ========================================== -->
+            <section id="progress" class="glass-panel rounded-2xl p-5 space-y-4">
+                
+                <div class="flex justify-between items-end border-b border-slate-100 pb-3">
+                    <div>
+                        <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block">CAMPAIGN TARGET</span>
+                        <h2 id="target-display" class="text-2xl font-black text-blue-900 font-serif">KSh 10,000+</h2>
+                    </div>
+                    <div id="progress-badge" class="bg-blue-600 text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-sm tracking-tight">
+                        0% CLEARED
+                    </div>
+                </div>
+
+                <!-- Animated Progress Bar -->
+                <div class="space-y-1">
+                    <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden p-0.5 border border-slate-200">
+                        <div id="progress-bar-fill" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 h-full rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Stats Grid (Aligned with updated prompts) -->
+                <div class="grid grid-cols-2 gap-2.5 pt-1">
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span class="text-[9px] font-extrabold text-slate-400 uppercase block">TOTAL RAISED</span>
+                        <span id="stat-raised" class="text-sm font-black text-blue-700">KSh 14,850</span>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span class="text-[9px] font-extrabold text-slate-400 uppercase block">TOTAL TARGET</span>
+                        <span id="stat-goal" class="text-sm font-black text-blue-700">KSh 4,000</span>
+                    </div>
+                    <div class="bg-red-50/60 p-3 rounded-xl border border-red-100">
+                        <span class="text-[9px] font-extrabold text-red-400 uppercase block">AMOUNT TO RAISE</span>
+                        <span id="stat-to-raise" class="text-sm font-black text-red-600">KSh 10,000+</span>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span class="text-[9px] font-extrabold text-slate-400 uppercase block">CONTRIBUTORS</span>
+                        <span id="stat-contributors" class="text-sm font-black text-slate-800">74</span>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span class="text-[9px] font-extrabold text-slate-400 uppercase block">VERIFIED PLEDGES</span>
+                        <span id="stat-verified" class="text-sm font-black text-emerald-600">62</span>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span class="text-[9px] font-extrabold text-slate-400 uppercase block">PENDING PLEDGES</span>
+                        <span id="stat-pending" class="text-sm font-black text-amber-600">12</span>
+                    </div>
+                </div>
+
+                <p class="text-[10px] text-slate-500 text-center leading-normal pt-1 italic">
+                    Pledges are reminders to give. Only payments verified by an administrator count towards the amount received.
+                </p>
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- 3. CONTRIBUTION PACKAGES SECTION           -->
+            <!-- ========================================== -->
+            <section id="packages" class="space-y-3.5">
+                <div>
+                    <h2 class="text-xl font-bold font-serif text-blue-950">Contribution packages</h2>
+                    <p class="text-xs text-slate-500">Every contribution matters. Every support is appreciated.</p>
+                </div>
+
+                <div class="space-y-3">
+
+                    <!-- Seed Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Seed</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 500</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            A small contribution that helps move the Battalion closer to the goal.
+                        </p>
+                        <button onclick="openPledgeModal('Seed', 500)" class="w-full mt-2 py-2.5 sage-button font-bold rounded-xl text-xs transition-all">
+                            Choose Seed
+                        </button>
+                    </div>
+
+                    <!-- Shield Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-shield-halved text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Shield</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 1,000</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Supporting the graduates and their Christian service journey.
+                        </p>
+                        <button onclick="openPledgeModal('Shield', 1000)" class="w-full mt-2 py-2.5 sage-button font-bold rounded-xl text-xs transition-all">
+                            Choose Shield
+                        </button>
+                    </div>
+
+                    <!-- Warrior Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-award text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Warrior</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 2,000</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            A meaningful contribution towards the graduation requirements.
+                        </p>
+                        <button onclick="openPledgeModal('Warrior', 2000)" class="w-full mt-2 py-2.5 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 text-blue-700 font-bold rounded-xl text-xs transition-colors">
+                            Choose Warrior
+                        </button>
+                    </div>
+
+                    <!-- Champion Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-crown text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Champion</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 5,000</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Strong support for the Christian Service Battalion graduates.
+                        </p>
+                        <button onclick="openPledgeModal('Champion', 5000)" class="w-full mt-2 py-2.5 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 text-blue-700 font-bold rounded-xl text-xs transition-colors">
+                            Choose Champion
+                        </button>
+                    </div>
+
+                    <!-- Sponsor Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-lightbulb text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Sponsor</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 8,000</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            A significant contribution towards regional Battalion projects.
+                        </p>
+                        <button onclick="openPledgeModal('Sponsor', 8000)" class="w-full mt-2 py-2.5 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 text-blue-700 font-bold rounded-xl text-xs transition-colors">
+                            Choose Sponsor
+                        </button>
+                    </div>
+
+                    <!-- Patron Package -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-2 hover:border-blue-300 transition-all">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-gem text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Patron</h3>
+                        </div>
+                        <div class="text-base font-black text-blue-900">KSh 10,000+</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Major support towards the battalion program.
+                        </p>
+                        <button onclick="openPledgeModal('Patron', 10000)" class="w-full mt-2 py-2.5 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 text-blue-700 font-bold rounded-xl text-xs transition-colors">
+                            Choose Patron
+                        </button>
+                    </div>
+
+                    <!-- Custom Contribution -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200/70 shadow-sm space-y-3">
+                        <div class="flex items-center gap-2 text-blue-600">
+                            <i class="fa-solid fa-hand-holding-heart text-xs"></i>
+                            <h3 class="font-bold text-slate-900 text-sm">Custom contribution</h3>
+                        </div>
+                        <p class="text-xs text-slate-500">Give any amount from KSh 100.</p>
+                        
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold uppercase text-slate-400 block">ENTER AMOUNT IN KSH</label>
+                            <input type="number" id="custom-amount-input" placeholder="1000" min="100" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-bold text-slate-800 focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <button onclick="handleCustomSubmit()" class="w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold rounded-xl text-xs transition-colors">
+                            Pledge Custom Amount
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- 4. BATTALION MOTTO & CREST SECTION         -->
+            <!-- ========================================== -->
+            <section id="badge" class="glass-panel rounded-2xl p-5 space-y-5 text-center">
+                
+                <div>
+                    <span class="text-[10px] font-extrabold tracking-widest text-blue-500 uppercase">THE BATTALION MOTTO</span>
+                    <h2 class="text-2xl font-black font-serif text-blue-950 mt-1">
+                        Bright and Keen for Christ
+                    </h2>
+                </div>
+
+                <p class="text-xs text-slate-600 leading-relaxed text-left bg-slate-50/80 p-3.5 rounded-xl border border-slate-100">
+                    Our motto is built on the Shield of Faith — <span class="italic">"Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked."</span>
+                    <strong class="block font-bold text-slate-800 text-[11px] text-right mt-1.5">Ephesians 6:16</strong>
+                </p>
+
+                <!-- Large CSB emblem image from the provided reference -->
+                <div class="py-2 flex justify-center">
+                    <div class="w-64 bg-white border border-slate-100 rounded-3xl p-4 shadow-xl flex flex-col items-center">
+                        <img src="WhatsApp Image 2026-10-17 at 23.59.11.jpeg" alt="BATTALION EMBLEM" class="w-32 h-32 object-cover rounded-full mb-3 shadow-md">
+                    </div>
+                </div>
+
+                <!-- Filter Pill Buttons -->
+                <div class="flex justify-center items-center gap-2 pt-1 flex-wrap">
+                    <button onclick="setActivePill('bright')" id="pill-bright" class="px-4 py-1.5 rounded-full text-xs font-black transition-all shadow-sm flex items-center gap-1.5 bg-blue-600 text-white">
+                        <i class="fa-solid fa-fire text-amber-300"></i> BRIGHT
+                    </button>
+                    <button onclick="setActivePill('keen')" id="pill-keen" class="px-4 py-1.5 rounded-full text-xs font-black transition-all border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 flex items-center gap-1.5">
+                        <i class="fa-solid fa-pen-nib text-slate-400"></i> KEEN
+                    </button>
+                    <button onclick="setActivePill('christ')" id="pill-christ" class="px-4 py-1.5 rounded-full text-xs font-black transition-all border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 flex items-center gap-1.5">
+                        <i class="fa-solid fa-book-open text-slate-400"></i> CHRIST
+                    </button>
+                </div>
+
+                <!-- Interactive Accordions -->
+                <div class="text-left space-y-2 pt-2">
+                    
+                    <!-- Accordion 1: BRIGHT -->
+                    <div id="card-bright" class="border border-amber-200/80 rounded-2xl overflow-hidden bg-amber-50/40">
+                        <button onclick="toggleAccordion('acc-bright')" class="w-full px-4 py-3 flex items-center justify-between text-left font-bold text-xs text-slate-800 hover:bg-amber-100/30 transition-colors">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid fa-fire"></i>
+                                </div>
+                                <div>
+                                    <span class="font-black text-blue-900 text-sm">BRIGHT</span>
+                                    <span class="text-[9px] block text-slate-500 font-bold uppercase tracking-wide">FLAMING TORCH · MATTHEW 5:16</span>
+                                </div>
+                            </div>
+                            <i id="icon-acc-bright" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300 transform rotate-180"></i>
+                        </button>
+                        <div id="acc-bright" class="px-4 pb-3 text-xs text-slate-600 leading-relaxed border-t border-amber-100/60 pt-2">
+                            The flaming torch represents the life of a Christian shining like a light day by day — a life whose good works glorify our Father in heaven.
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2: KEEN -->
+                    <div id="card-keen" class="border border-slate-200/80 rounded-2xl overflow-hidden bg-white">
+                        <button onclick="toggleAccordion('acc-keen')" class="w-full px-4 py-3 flex items-center justify-between text-left font-bold text-xs text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <div>
+                                    <span class="font-black text-blue-900 text-sm">KEEN</span>
+                                    <span class="text-[9px] block text-slate-500 font-bold uppercase tracking-wide">SHARPENED SWORD · HEBREWS 4:12</span>
+                                </div>
+                            </div>
+                            <i id="icon-acc-keen" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div id="acc-keen" class="hidden px-4 pb-3 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
+                            The sharp sword signifies readiness, eagerness, and active commitment to God's word and service.
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3: CHRIST -->
+                    <div id="card-christ" class="border border-slate-200/80 rounded-2xl overflow-hidden bg-white">
+                        <button onclick="toggleAccordion('acc-christ')" class="w-full px-4 py-3 flex items-center justify-between text-left font-bold text-xs text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <span class="font-black text-blue-900 text-sm">CHRIST</span>
+                                    <span class="text-[9px] block text-slate-500 font-bold uppercase tracking-wide">OPEN BIBLE · 1 CORINTHIANS 3:11</span>
+                                </div>
+                            </div>
+                            <i id="icon-acc-christ" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div id="acc-christ" class="hidden px-4 pb-3 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
+                            The open Bible stands as the ultimate foundation of truth and faith.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- 5. GRADUATE UNIFORM ITEMS BREAKDOWN        -->
+            <!-- ========================================== -->
+            <section id="items" class="space-y-3.5">
+                <div>
+                    <h2 class="text-xl font-bold font-serif text-blue-950">Graduate uniform items</h2>
+                    <p class="text-xs text-slate-500">These are the Battalion fundraising campaign items to support:</p>
+                </div>
+
+                <!-- 2x2 Uniform Items Grid -->
+                <div class="grid grid-cols-2 gap-3">
+                    
+                    <!-- Tie -->
+                    <div class="bg-white p-3.5 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col items-center text-center space-y-1">
+                        <div class="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-sm mb-1">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <span class="font-bold text-xs text-slate-800">Tie</span>
+                        <span class="text-[10px] font-semibold text-slate-400">KSh 300 x 2</span>
+                        <span class="text-xs font-black text-blue-900">KSh 600</span>
+                    </div>
+
+                    <!-- Shield -->
+                    <div class="bg-white p-3.5 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col items-center text-center space-y-1">
+                        <div class="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-sm mb-1">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="font-bold text-xs text-slate-800">Shield</span>
+                        <span class="text-[10px] font-semibold text-slate-400">KSh 500 x 2</span>
+                        <span class="text-xs font-black text-blue-900">KSh 1,000</span>
+                    </div>
+
+                    <!-- Caps -->
+                    <div class="bg-white p-3.5 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col items-center text-center space-y-1">
+                        <div class="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-sm mb-1">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="font-bold text-xs text-slate-800">Caps</span>
+                        <span class="text-[10px] font-semibold text-slate-400">KSh 600 x 2</span>
+                        <span class="text-xs font-black text-blue-900">KSh 1,200</span>
+                    </div>
+
+                    <!-- Ribbon -->
+                    <div class="bg-white p-3.5 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col items-center text-center space-y-1">
+                        <div class="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-sm mb-1">
+                            <i class="fa-solid fa-ribbon"></i>
+                        </div>
+                        <span class="font-bold text-xs text-slate-800">Ribbon</span>
+                        <span class="text-[10px] font-semibold text-slate-400">KSh 1,000 x 2</span>
+                        <span class="text-xs font-black text-blue-900">KSh 2,000</span>
+                    </div>
+
+                </div>
+
+                <!-- Total Estimated Cost Pill Button -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-4 shadow-md flex justify-between items-center px-5">
+                    <span class="text-xs font-extrabold uppercase tracking-wider">ESTIMATED TOTAL</span>
+                    <span class="text-lg font-black text-amber-300">KSh 4,800</span>
+                </div>
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- 6. CALL TO ACTION BANNER                   -->
+            <!-- ========================================== -->
+            <section class="bg-gradient-to-b from-blue-50/80 to-amber-50/40 p-5 rounded-2xl border border-blue-100 text-center space-y-3.5 shadow-sm">
+                <p class="text-xs font-medium text-blue-950 leading-relaxed">
+                    Every contribution brings us closer to our goal. Together, we are supporting our graduates in their prospective Christian service.
+                </p>
+                <button onclick="scrollToSection('packages')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-md transition-all text-xs uppercase tracking-wider">
+                    See our contributors
+                </button>
+            </section>
+
+        </main>
+
+
+        <!-- ========================================== -->
+        <!-- 7. FOOTER SECTION                          -->
+        <!-- ========================================== -->
+        <footer id="about" class="bg-blue-900 text-white p-6 rounded-t-3xl text-center space-y-2 mt-8 mb-10">
+            <h3 class="font-serif font-bold text-sm tracking-wide text-amber-300">
+                Bright and Keen for Christ 📍
+            </h3>
+            <p class="text-[10px] text-blue-200 tracking-wider uppercase font-extrabold">
+                AIC KYAMULENDU — CHRISTIAN SERVICE BATTALION
+            </p>
+        </footer>
+
+
+        <!-- ========================================== -->
+        <!-- 8. BOTTOM NAVIGATION BAR                   -->
+        <!-- ========================================== -->
+        <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-slate-200 py-2.5 px-3 flex justify-around items-center z-40 text-slate-400 shadow-2xl">
+            <button onclick="scrollToSection('home')" class="flex flex-col items-center gap-0.5 text-blue-600 font-bold text-[10px]">
+                <i class="fa-solid fa-house text-sm"></i>
+                <span>Home</span>
+            </button>
+            <button onclick="scrollToSection('packages')" class="flex flex-col items-center gap-0.5 hover:text-blue-600 text-[10px] transition-colors">
+                <i class="fa-solid fa-hand-holding-dollar text-sm"></i>
+                <span>Pledges</span>
+            </button>
+            <button onclick="scrollToSection('badge')" class="flex flex-col items-center gap-0.5 hover:text-blue-600 text-[10px] transition-colors">
+                <i class="fa-solid fa-cross text-sm"></i>
+                <span>Gospel</span>
+            </button>
+            <button onclick="scrollToSection('items')" class="flex flex-col items-center gap-0.5 hover:text-blue-600 text-[10px] transition-colors">
+                <i class="fa-solid fa-list-check text-sm"></i>
+                <span>Program</span>
+            </button>
+            <button onclick="scrollToSection('about')" class="flex flex-col items-center gap-0.5 hover:text-blue-600 text-[10px] transition-colors">
+                <i class="fa-solid fa-ellipsis text-sm"></i>
+                <span>More</span>
+            </button>
+        </nav>
+
+
+        <!-- ========================================== -->
+        <!-- PLEDGE & M-PESA MODAL INTERACTION          -->
+        <!-- ========================================== -->
+        <div id="pledge-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+            <div class="bg-white rounded-3xl w-full max-w-sm p-6 space-y-4 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+                
+                <button onclick="closePledgeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg w-8 h-8 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="text-center space-y-1">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto text-xl mb-2">
+                        <i class="fa-solid fa-heart-handshake"></i>
+                    </div>
+                    <h3 class="font-black text-slate-900 text-base" id="modal-package-title">Make a Pledge</h3>
+                    <p class="text-xs text-slate-500">Supporting AIC Kyamulendu CSB Graduates</p>
+                </div>
+
+                <form onsubmit="handlePledgeSubmit(event)" class="space-y-3 pt-2">
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-400 uppercase block mb-1">Your Full Name</label>
+                        <input type="text" id="pledge-name" required placeholder="e.g. John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-400 uppercase block mb-1">Phone Number (M-Pesa Prompt)</label>
+                        <input type="tel" id="pledge-phone" required placeholder="0712345678" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-400 uppercase block mb-1">Pledge Amount (KSh)</label>
+                        <input type="number" id="modal-amount-input" required min="100" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-black text-blue-900 focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <div class="bg-emerald-50 p-3 rounded-2xl text-[11px] text-emerald-900 border border-emerald-100 space-y-1">
+                        <span class="font-extrabold flex items-center gap-1">
+                            <i class="fa-solid fa-mobile-screen-button text-emerald-600"></i> Direct M-PESA Pledge:
+                        </span>
+                        <p class="text-[10px] leading-tight text-emerald-800">
+                            Submitting logs your pledge. Administrators will verify M-PESA payments into the official total.
+                        </p>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-[0.98] text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all shadow-md">
+                        Submit Pledge
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- NOTIFICATION TOAST -->
+        <div id="toast" class="fixed bottom-16 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-3 rounded-full shadow-2xl z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2 max-w-xs text-center border border-slate-700">
+            <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+            <span id="toast-message">Pledge submitted successfully!</span>
+        </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE JAVASCRIPT STATE               -->
+    <!-- ========================================== -->
+    <script>
+        // Data State matching user requests and image details
+        let totalRaised = 14850;
+        let totalTarget = 4000;
+        let contributorsCount = 74;
+        let verifiedPledges = 62;
+        let pendingPledges = 12;
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if(el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Accordion functionality
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                el.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Motto Tab Pills Switcher
+        function setActivePill(type) {
+            const pills = ['bright', 'keen', 'christ'];
+            pills.forEach(p => {
+                const btn = document.getElementById('pill-' + p);
+                const card = document.getElementById('acc-' + p);
+                const icon = document.getElementById('icon-acc-' + p);
+
+                if (p === type) {
+                    btn.className = "px-4 py-1.5 rounded-full text-xs font-black transition-all shadow-sm flex items-center gap-1.5 bg-blue-600 text-white";
+                    card.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                } else {
+                    btn.className = "px-4 py-1.5 rounded-full text-xs font-black transition-all border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 flex items-center gap-1.5";
+                    card.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        }
+
+        // Modal Controls
+        function openPledgeModal(packageName, amount) {
+            document.getElementById('modal-package-title').innerText = packageName + ' Package Pledge';
+            document.getElementById('modal-amount-input').value = amount;
+            document.getElementById('pledge-modal').classList.remove('hidden');
+        }
+
+        function closePledgeModal() {
+            document.getElementById('pledge-modal').classList.add('hidden');
+        }
+
+        function handleCustomSubmit() {
+            const input = document.getElementById('custom-amount-input');
+            const val = parseInt(input.value);
+            if (!val || val < 100) {
+                showToast("Please enter a valid amount (minimum KSh 100)");
+                return;
+            }
+            openPledgeModal('Custom', val);
+        }
+
+        function handlePledgeSubmit(e) {
+            e.preventDefault();
+            const amount = parseInt(document.getElementById('modal-amount-input').value) || 0;
+            const name = document.getElementById('pledge-name').value;
+            
+            contributorsCount += 1;
+            pendingPledges += 1;
+            totalRaised += amount;
+
+            updateStatsDisplay();
+            closePledgeModal();
+            showToast(`God bless you ${name}! Pledge of KSh ${amount.toLocaleString()} logged.`);
+            
+            document.getElementById('pledge-name').value = '';
+            document.getElementById('pledge-phone').value = '';
+        }
+
+        function updateStatsDisplay() {
+            document.getElementById('stat-raised').innerText = 'KSh ' + totalRaised.toLocaleString();
+            document.getElementById('stat-goal').innerText = 'KSh ' + totalTarget.toLocaleString();
+            document.getElementById('stat-contributors').innerText = contributorsCount;
+            document.getElementById('stat-verified').innerText = verifiedPledges;
+            document.getElementById('stat-pending').innerText = pendingPledges;
+
+            let percentage = Math.round((totalRaised / totalTarget) * 100);
+            document.getElementById('progress-badge').innerText = percentage + '% CLEARED';
+            document.getElementById('progress-bar-fill').style.width = Math.min(percentage, 100) + '%';
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 4000);
+        }
+
+        // Initial setup
+        window.onload = function() {
+            updateStatsDisplay();
+        };
+    </script>
+</body>
+</html>
